@@ -30,21 +30,21 @@ namespace Lee_y_Escribe
             voz.SelectVoiceByHints(VoiceGender.Female);
             voz.SetOutputToDefaultAudioDevice();
             voz.Speak(texto.ToString());
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            voz.Pause();
+            Application.Exit();           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Principal principal = new Principal();
+            Instrucciones instrucciones = new Instrucciones();
+            voz.Pause();
             this.Hide();
-            principal.Visible = true;
+            instrucciones.Visible = true;
         }
-
         private void Tiempo_Tick(object sender, EventArgs e)
         {
             Thread tarea = new Thread(new ParameterizedThreadStart(Narrador));
@@ -61,11 +61,11 @@ namespace Lee_y_Escribe
                     + System.Environment.NewLine
                     + "Durante el proceso te mostraré lo que debes hacer para completar la lección,"
                     + System.Environment.NewLine
-                    + "Entonces iniciemos, vamos a la primera lección. "
+                    + "Entonces iniciemos, vamos a las lecciones "
                     + System.Environment.NewLine
-                    + "Para ir a la primera lección presiona aquí,");
+                    + "Para ir a la pantalla de lecciones presiona aquí,");
             }
-
+            
             if (Time1 >= 30 && Time1 % 2 == 0)
             {
                 PFlechaR.Visible = true;

@@ -1,6 +1,6 @@
 ﻿namespace Lee_y_Escribe
 {
-    partial class Principal
+    partial class Instrucciones
     {
         /// <summary>
         /// Required designer variable.
@@ -29,109 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.BJuegos = new System.Windows.Forms.Button();
-            this.Salir = new System.Windows.Forms.Button();
-            this.LVocales = new System.Windows.Forms.Button();
-            this.Inicio = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Instrucciones));
             this.panel2 = new System.Windows.Forms.Panel();
             this.TVelocidad = new System.Windows.Forms.TrackBar();
             this.PFlechaR = new System.Windows.Forms.PictureBox();
             this.PFlechaL = new System.Windows.Forms.PictureBox();
             this.BRepetir = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BJuegos = new System.Windows.Forms.Button();
+            this.Salir = new System.Windows.Forms.Button();
+            this.LVocales = new System.Windows.Forms.Button();
+            this.Inicio = new System.Windows.Forms.Button();
+            this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TVelocidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PFlechaR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PFlechaL)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Green;
-            this.panel1.Controls.Add(this.BJuegos);
-            this.panel1.Controls.Add(this.Salir);
-            this.panel1.Controls.Add(this.LVocales);
-            this.panel1.Controls.Add(this.Inicio);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 544);
-            this.panel1.TabIndex = 1;
-            // 
-            // BJuegos
-            // 
-            this.BJuegos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BJuegos.FlatAppearance.BorderSize = 0;
-            this.BJuegos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.BJuegos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.BJuegos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BJuegos.Font = new System.Drawing.Font("Berlin Sans FB Demi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BJuegos.Image = ((System.Drawing.Image)(resources.GetObject("BJuegos.Image")));
-            this.BJuegos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BJuegos.Location = new System.Drawing.Point(3, 169);
-            this.BJuegos.Name = "BJuegos";
-            this.BJuegos.Size = new System.Drawing.Size(207, 66);
-            this.BJuegos.TabIndex = 5;
-            this.BJuegos.Text = "   Juegos";
-            this.BJuegos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BJuegos.UseVisualStyleBackColor = true;
-            // 
-            // Salir
-            // 
-            this.Salir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Salir.FlatAppearance.BorderSize = 0;
-            this.Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Salir.Font = new System.Drawing.Font("Berlin Sans FB Demi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salir.Image = ((System.Drawing.Image)(resources.GetObject("Salir.Image")));
-            this.Salir.Location = new System.Drawing.Point(4, 462);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(204, 66);
-            this.Salir.TabIndex = 4;
-            this.Salir.Text = "   Salir";
-            this.Salir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Salir.UseVisualStyleBackColor = true;
-            this.Salir.Click += new System.EventHandler(this.Salir_Click);
-            // 
-            // LVocales
-            // 
-            this.LVocales.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.LVocales.FlatAppearance.BorderSize = 0;
-            this.LVocales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.LVocales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.LVocales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LVocales.Font = new System.Drawing.Font("Berlin Sans FB Demi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LVocales.Image = ((System.Drawing.Image)(resources.GetObject("LVocales.Image")));
-            this.LVocales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LVocales.Location = new System.Drawing.Point(7, 86);
-            this.LVocales.Name = "LVocales";
-            this.LVocales.Size = new System.Drawing.Size(204, 66);
-            this.LVocales.TabIndex = 1;
-            this.LVocales.Text = " Lecciones";
-            this.LVocales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.LVocales.UseVisualStyleBackColor = true;
-            // 
-            // Inicio
-            // 
-            this.Inicio.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Inicio.FlatAppearance.BorderSize = 0;
-            this.Inicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.Inicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Inicio.Font = new System.Drawing.Font("Berlin Sans FB Demi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Inicio.Image = ((System.Drawing.Image)(resources.GetObject("Inicio.Image")));
-            this.Inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Inicio.Location = new System.Drawing.Point(6, 3);
-            this.Inicio.Name = "Inicio";
-            this.Inicio.Size = new System.Drawing.Size(204, 66);
-            this.Inicio.TabIndex = 0;
-            this.Inicio.Text = "   Inicio";
-            this.Inicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Inicio.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -143,11 +58,11 @@
             this.panel2.Controls.Add(this.PFlechaR);
             this.panel2.Controls.Add(this.PFlechaL);
             this.panel2.Controls.Add(this.BRepetir);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(213, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(661, 544);
-            this.panel2.TabIndex = 2;
+            this.panel2.TabIndex = 3;
             // 
             // TVelocidad
             // 
@@ -198,42 +113,127 @@
             this.BRepetir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BRepetir.UseVisualStyleBackColor = false;
             // 
-            // timer1
+            // panel1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.panel1.BackColor = System.Drawing.Color.Green;
+            this.panel1.Controls.Add(this.BJuegos);
+            this.panel1.Controls.Add(this.Salir);
+            this.panel1.Controls.Add(this.LVocales);
+            this.panel1.Controls.Add(this.Inicio);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(213, 544);
+            this.panel1.TabIndex = 4;
             // 
-            // Principal
+            // BJuegos
+            // 
+            this.BJuegos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BJuegos.FlatAppearance.BorderSize = 0;
+            this.BJuegos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.BJuegos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.BJuegos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BJuegos.Font = new System.Drawing.Font("Berlin Sans FB Demi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BJuegos.Image = ((System.Drawing.Image)(resources.GetObject("BJuegos.Image")));
+            this.BJuegos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BJuegos.Location = new System.Drawing.Point(3, 169);
+            this.BJuegos.Name = "BJuegos";
+            this.BJuegos.Size = new System.Drawing.Size(207, 66);
+            this.BJuegos.TabIndex = 5;
+            this.BJuegos.Text = "   Juegos";
+            this.BJuegos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BJuegos.UseVisualStyleBackColor = true;
+            // 
+            // Salir
+            // 
+            this.Salir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Salir.FlatAppearance.BorderSize = 0;
+            this.Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Salir.Font = new System.Drawing.Font("Berlin Sans FB Demi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salir.Image = ((System.Drawing.Image)(resources.GetObject("Salir.Image")));
+            this.Salir.Location = new System.Drawing.Point(4, 462);
+            this.Salir.Name = "Salir";
+            this.Salir.Size = new System.Drawing.Size(204, 66);
+            this.Salir.TabIndex = 4;
+            this.Salir.Text = "   Salir";
+            this.Salir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Salir.UseVisualStyleBackColor = true;
+            // 
+            // LVocales
+            // 
+            this.LVocales.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.LVocales.FlatAppearance.BorderSize = 0;
+            this.LVocales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.LVocales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.LVocales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LVocales.Font = new System.Drawing.Font("Berlin Sans FB Demi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LVocales.Image = ((System.Drawing.Image)(resources.GetObject("LVocales.Image")));
+            this.LVocales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LVocales.Location = new System.Drawing.Point(7, 86);
+            this.LVocales.Name = "LVocales";
+            this.LVocales.Size = new System.Drawing.Size(204, 66);
+            this.LVocales.TabIndex = 1;
+            this.LVocales.Text = " Lecciones";
+            this.LVocales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.LVocales.UseVisualStyleBackColor = true;
+            // 
+            // Inicio
+            // 
+            this.Inicio.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Inicio.FlatAppearance.BorderSize = 0;
+            this.Inicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Inicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Inicio.Font = new System.Drawing.Font("Berlin Sans FB Demi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inicio.Image = ((System.Drawing.Image)(resources.GetObject("Inicio.Image")));
+            this.Inicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Inicio.Location = new System.Drawing.Point(6, 3);
+            this.Inicio.Name = "Inicio";
+            this.Inicio.Size = new System.Drawing.Size(204, 66);
+            this.Inicio.TabIndex = 0;
+            this.Inicio.Text = "   Inicio";
+            this.Inicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Inicio.UseVisualStyleBackColor = true;
+            // 
+            // Tiempo
+            // 
+            this.Tiempo.Enabled = true;
+            this.Tiempo.Interval = 1000;
+            this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
+            // 
+            // Instrucciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 544);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Principal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Principal";
-            this.panel1.ResumeLayout(false);
+            this.Controls.Add(this.panel2);
+            this.Name = "Instrucciones";
+            this.Text = "Instrucciones";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TVelocidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PFlechaR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PFlechaL)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button BJuegos;
-        private System.Windows.Forms.Button Salir;
-        private System.Windows.Forms.Button LVocales;
-        private System.Windows.Forms.Button Inicio;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TrackBar TVelocidad;
         private System.Windows.Forms.PictureBox PFlechaR;
         private System.Windows.Forms.PictureBox PFlechaL;
         private System.Windows.Forms.Button BRepetir;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button BJuegos;
+        private System.Windows.Forms.Button Salir;
+        private System.Windows.Forms.Button LVocales;
+        private System.Windows.Forms.Button Inicio;
+        private System.Windows.Forms.Timer Tiempo;
     }
 }
