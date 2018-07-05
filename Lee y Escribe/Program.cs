@@ -9,14 +9,14 @@ namespace Lee_y_Escribe
     static class Program
     {
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Punto de entrada principal para la aplicación. 
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main() 
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false); 
             Application.Run(new Portada());
         }
     }
-}
+} 
