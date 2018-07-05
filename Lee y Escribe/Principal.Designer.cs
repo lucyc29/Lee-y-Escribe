@@ -36,16 +36,12 @@
             this.LVocales = new System.Windows.Forms.Button();
             this.Inicio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.TVelocidad = new System.Windows.Forms.TrackBar();
-            this.PFlechaR = new System.Windows.Forms.PictureBox();
-            this.PFlechaL = new System.Windows.Forms.PictureBox();
             this.BRepetir = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.TVelocidad = new System.Windows.Forms.TrackBar();
+            this.Tiempo = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TVelocidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PFlechaR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PFlechaL)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,7 +84,7 @@
             this.Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Salir.Font = new System.Drawing.Font("Berlin Sans FB Demi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salir.Image = ((System.Drawing.Image)(resources.GetObject("Salir.Image")));
-            this.Salir.Location = new System.Drawing.Point(4, 462);
+            this.Salir.Location = new System.Drawing.Point(3, 467);
             this.Salir.Name = "Salir";
             this.Salir.Size = new System.Drawing.Size(204, 66);
             this.Salir.TabIndex = 4;
@@ -139,46 +135,13 @@
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.TVelocidad);
-            this.panel2.Controls.Add(this.PFlechaR);
-            this.panel2.Controls.Add(this.PFlechaL);
             this.panel2.Controls.Add(this.BRepetir);
+            this.panel2.Controls.Add(this.TVelocidad);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(213, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(661, 544);
             this.panel2.TabIndex = 2;
-            // 
-            // TVelocidad
-            // 
-            this.TVelocidad.Location = new System.Drawing.Point(5, 482);
-            this.TVelocidad.Minimum = -10;
-            this.TVelocidad.Name = "TVelocidad";
-            this.TVelocidad.Size = new System.Drawing.Size(171, 45);
-            this.TVelocidad.TabIndex = 6;
-            this.TVelocidad.Value = -2;
-            // 
-            // PFlechaR
-            // 
-            this.PFlechaR.BackColor = System.Drawing.Color.Transparent;
-            this.PFlechaR.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PFlechaR.BackgroundImage")));
-            this.PFlechaR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PFlechaR.Location = new System.Drawing.Point(415, 461);
-            this.PFlechaR.Name = "PFlechaR";
-            this.PFlechaR.Size = new System.Drawing.Size(86, 57);
-            this.PFlechaR.TabIndex = 8;
-            this.PFlechaR.TabStop = false;
-            // 
-            // PFlechaL
-            // 
-            this.PFlechaL.BackColor = System.Drawing.Color.Transparent;
-            this.PFlechaL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PFlechaL.BackgroundImage")));
-            this.PFlechaL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PFlechaL.Location = new System.Drawing.Point(5, 77);
-            this.PFlechaL.Name = "PFlechaL";
-            this.PFlechaL.Size = new System.Drawing.Size(140, 66);
-            this.PFlechaL.TabIndex = 7;
-            this.PFlechaL.TabStop = false;
             // 
             // BRepetir
             // 
@@ -190,7 +153,7 @@
             this.BRepetir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BRepetir.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BRepetir.Image = ((System.Drawing.Image)(resources.GetObject("BRepetir.Image")));
-            this.BRepetir.Location = new System.Drawing.Point(507, 461);
+            this.BRepetir.Location = new System.Drawing.Point(507, 474);
             this.BRepetir.Name = "BRepetir";
             this.BRepetir.Size = new System.Drawing.Size(141, 57);
             this.BRepetir.TabIndex = 6;
@@ -198,9 +161,20 @@
             this.BRepetir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BRepetir.UseVisualStyleBackColor = false;
             // 
-            // timer1
+            // TVelocidad
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.TVelocidad.Location = new System.Drawing.Point(457, 68);
+            this.TVelocidad.Minimum = -10;
+            this.TVelocidad.Name = "TVelocidad";
+            this.TVelocidad.Size = new System.Drawing.Size(171, 45);
+            this.TVelocidad.TabIndex = 6;
+            this.TVelocidad.Value = -2;
+            // 
+            // Tiempo
+            // 
+            this.Tiempo.Enabled = true;
+            this.Tiempo.Interval = 1000;
+            this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
             // 
             // Principal
             // 
@@ -216,8 +190,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TVelocidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PFlechaR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PFlechaL)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -231,9 +203,7 @@
         private System.Windows.Forms.Button Inicio;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TrackBar TVelocidad;
-        private System.Windows.Forms.PictureBox PFlechaR;
-        private System.Windows.Forms.PictureBox PFlechaL;
         private System.Windows.Forms.Button BRepetir;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer Tiempo;
     }
 }

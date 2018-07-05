@@ -26,10 +26,18 @@ namespace Lee_y_Escribe
 
         private void Narrador(object texto)
         {
-            voz.Rate = TVelocidad.Value;
-            voz.SelectVoiceByHints(VoiceGender.Female);
-            voz.SetOutputToDefaultAudioDevice();
-            voz.Speak(texto.ToString());
+            try
+            {
+                voz.Rate = TVelocidad.Value;
+                voz.SelectVoiceByHints(VoiceGender.Female);
+                voz.SetOutputToDefaultAudioDevice();
+                voz.Speak(texto.ToString());
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -51,7 +59,9 @@ namespace Lee_y_Escribe
             Time1 += 1;
             if (Time1 == 1)
             {
-                tarea.Start("Hola,"
+                try
+                {
+                    tarea.Start("Hola,"
                     + System.Environment.NewLine
                     + "Bienvenido a nuestro espacio aprende a leer y a escribir con tatty,"
                     + System.Environment.NewLine
@@ -64,6 +74,12 @@ namespace Lee_y_Escribe
                     + "Entonces iniciemos, vamos a las lecciones "
                     + System.Environment.NewLine
                     + "Para ir a la pantalla de lecciones presiona aquí,");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
             
             if (Time1 >= 30 && Time1 % 2 == 0)

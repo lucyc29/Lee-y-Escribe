@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Instrucciones));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PAtras = new System.Windows.Forms.Button();
+            this.PFlechaL1 = new System.Windows.Forms.PictureBox();
             this.TVelocidad = new System.Windows.Forms.TrackBar();
             this.PFlechaR = new System.Windows.Forms.PictureBox();
             this.PFlechaL = new System.Windows.Forms.PictureBox();
@@ -41,14 +43,12 @@
             this.LVocales = new System.Windows.Forms.Button();
             this.Inicio = new System.Windows.Forms.Button();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
-            this.PFlechaL1 = new System.Windows.Forms.PictureBox();
-            this.PAtras = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PFlechaL1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TVelocidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PFlechaR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PFlechaL)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PFlechaL1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -68,6 +68,35 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(661, 544);
             this.panel2.TabIndex = 3;
+            // 
+            // PAtras
+            // 
+            this.PAtras.BackColor = System.Drawing.Color.Transparent;
+            this.PAtras.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.PAtras.FlatAppearance.BorderSize = 0;
+            this.PAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.PAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.PAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PAtras.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PAtras.Image = ((System.Drawing.Image)(resources.GetObject("PAtras.Image")));
+            this.PAtras.Location = new System.Drawing.Point(5, 474);
+            this.PAtras.Name = "PAtras";
+            this.PAtras.Size = new System.Drawing.Size(127, 57);
+            this.PAtras.TabIndex = 10;
+            this.PAtras.Text = "Atras";
+            this.PAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.PAtras.UseVisualStyleBackColor = false;
+            // 
+            // PFlechaL1
+            // 
+            this.PFlechaL1.BackColor = System.Drawing.Color.Transparent;
+            this.PFlechaL1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PFlechaL1.BackgroundImage")));
+            this.PFlechaL1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PFlechaL1.Location = new System.Drawing.Point(5, 168);
+            this.PFlechaL1.Name = "PFlechaL1";
+            this.PFlechaL1.Size = new System.Drawing.Size(140, 66);
+            this.PFlechaL1.TabIndex = 9;
+            this.PFlechaL1.TabStop = false;
             // 
             // TVelocidad
             // 
@@ -208,35 +237,6 @@
             this.Tiempo.Interval = 1000;
             this.Tiempo.Tick += new System.EventHandler(this.Tiempo_Tick);
             // 
-            // PFlechaL1
-            // 
-            this.PFlechaL1.BackColor = System.Drawing.Color.Transparent;
-            this.PFlechaL1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PFlechaL1.BackgroundImage")));
-            this.PFlechaL1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PFlechaL1.Location = new System.Drawing.Point(5, 168);
-            this.PFlechaL1.Name = "PFlechaL1";
-            this.PFlechaL1.Size = new System.Drawing.Size(140, 66);
-            this.PFlechaL1.TabIndex = 9;
-            this.PFlechaL1.TabStop = false;
-            // 
-            // PAtras
-            // 
-            this.PAtras.BackColor = System.Drawing.Color.Transparent;
-            this.PAtras.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.PAtras.FlatAppearance.BorderSize = 0;
-            this.PAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.PAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.PAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PAtras.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PAtras.Image = ((System.Drawing.Image)(resources.GetObject("PAtras.Image")));
-            this.PAtras.Location = new System.Drawing.Point(5, 474);
-            this.PAtras.Name = "PAtras";
-            this.PAtras.Size = new System.Drawing.Size(127, 57);
-            this.PAtras.TabIndex = 10;
-            this.PAtras.Text = "Atras";
-            this.PAtras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.PAtras.UseVisualStyleBackColor = false;
-            // 
             // Instrucciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,14 +245,15 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Instrucciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Instrucciones";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PFlechaL1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TVelocidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PFlechaR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PFlechaL)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PFlechaL1)).EndInit();
             this.ResumeLayout(false);
 
         }
