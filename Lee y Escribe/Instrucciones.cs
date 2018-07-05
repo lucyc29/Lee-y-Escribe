@@ -21,6 +21,10 @@ namespace Lee_y_Escribe
         {
             InitializeComponent();
             TVelocidad.Visible = false;
+            PFlechaL.Visible = false;
+            PFlechaL1.Visible = false;
+            PFlechaR.Visible = false;
+            PAtras.Visible = false;
         }
 
         private void Narrador(object texto)
@@ -41,18 +45,52 @@ namespace Lee_y_Escribe
                     + System.Environment.NewLine
                     + "dentro de cada pantalla veras símbolos como estos"
                     + System.Environment.NewLine
-                    + "Este sirve para repetir la instrucción"
+                    + "Este sirve para repetir la instrucción, en caso de no haber entendido lo que dije debes precionarlo"
                     + System.Environment.NewLine
-                    + "Este para seleccionar la leccion, o el juego dentro de este panel"
+                    + "Estos para seleccionar la leccion, o el juego dentro de este panel"
                     + System.Environment.NewLine
-                    + "y este para regresar a esta pantalla"
+                    + "y este sirve para regresar a esta pantalla"
                     );
             }
-            if (Time == 10)
+                if (Time >= 12 && Time %2 == 0)
+                {
+                    PFlechaR.Visible = true;
+                }
+                else
+                {
+                    PFlechaR.Visible = false;
+                }
+            
+            if (Time >= 18 && Time %2 == 0)
             {
-                Principal principal = new Principal();
-                this.Hide();
-                principal.Visible = true;
+                PFlechaR.Visible = false;
+                PFlechaL.Visible = true;
+                PFlechaL1.Visible = true;
+            }
+            else
+            {
+                PFlechaL.Visible = false;
+                PFlechaL1.Visible = false;
+
+            }
+            if(Time == 24)
+            {
+                PFlechaL.Visible = false;
+                PFlechaL1.Visible = false;
+            }
+
+            if (Time >= 24 && Time % 2 == 0)
+            {
+                PFlechaR.Visible = false;
+                PFlechaL.Visible = true;
+                PFlechaL1.Visible = true;
+            }
+            else
+            {
+                PFlechaL.Visible = false;
+                PFlechaL1.Visible = false;
+                PAtras.Visible = true;
+
             }
         }
     }
