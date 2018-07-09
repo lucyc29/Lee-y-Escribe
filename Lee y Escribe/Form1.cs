@@ -26,18 +26,11 @@ namespace Lee_y_Escribe
 
         private void Narrador(object texto)
         {
-            try
-            {
+            
                 voz.Rate = TVelocidad.Value;
                 voz.SelectVoiceByHints(VoiceGender.Female);
                 voz.SetOutputToDefaultAudioDevice();
                 voz.Speak(texto.ToString());
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-           
         }
 
         private void button2_Click(object sender, EventArgs e)
