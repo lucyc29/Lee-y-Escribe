@@ -54,5 +54,13 @@ namespace Lee_y_Escribe
                 }
             }
         }
+
+        private void BJuegos_Click(object sender, EventArgs e)
+        {
+            JMemoriA memoria = new JMemoriA();
+            voz.Pause();
+            this.Hide();
+            memoria.Visible = true;
+        }
     }
 }
