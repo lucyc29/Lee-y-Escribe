@@ -35,7 +35,7 @@ namespace Lee_y_Escribe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            voz.Pause();
+            voz.Pause() ;
             Application.Exit();           
         }
 
