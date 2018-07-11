@@ -101,6 +101,12 @@
     <Compile Include="Instrucciones.Designer.cs">
       <DependentUpon>Instrucciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="JMemoriA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JMemoriA.Designer.cs">
+      <DependentUpon>JMemoriA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     <EmbeddedResource Include="Instrucciones.resx">
       <DependentUpon>Instrucciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JMemoriA.resx">
+      <DependentUpon>JMemoriA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +156,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -160,6 +170,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Libros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Im1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Im2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Im3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Im4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Im5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Im6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Im7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Im8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agua.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
