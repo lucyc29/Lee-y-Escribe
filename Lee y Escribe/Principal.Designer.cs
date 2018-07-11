@@ -74,6 +74,7 @@
             this.BJuegos.Text = "   Juegos";
             this.BJuegos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BJuegos.UseVisualStyleBackColor = true;
+            this.BJuegos.Click += new System.EventHandler(this.BJuegos_Click);
             // 
             // Salir
             // 
