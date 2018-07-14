@@ -212,6 +212,7 @@
             this.LVocales.Text = " Lecciones";
             this.LVocales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.LVocales.UseVisualStyleBackColor = true;
+           
             // 
             // Inicio
             // 

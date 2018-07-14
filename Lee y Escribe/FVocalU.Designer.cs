@@ -77,6 +77,7 @@
             this.BatrasU.Text = "    Atras";
             this.BatrasU.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BatrasU.UseVisualStyleBackColor = false;
+            this.BatrasU.AutoSizeChanged += new System.EventHandler(this.BatrasU_Click);
             // 
             // Velocidad
             // 
@@ -103,7 +104,7 @@
             this.PUva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PUva.Location = new System.Drawing.Point(530, 25);
             this.PUva.Name = "PUva";
-            this.PUva.Size = new System.Drawing.Size(198, 172);
+            this.PUva.Size = new System.Drawing.Size(250, 113);
             this.PUva.TabIndex = 5;
             this.PUva.TabStop = false;
             // 
@@ -130,6 +131,7 @@
             this.BRepU.Text = "   Repetir";
             this.BRepU.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BRepU.UseVisualStyleBackColor = true;
+            this.BRepU.AutoSizeChanged += new System.EventHandler(this.BRepU_Click);
             // 
             // pictureBox1
             // 
@@ -147,6 +149,7 @@
             // 
             this.Tiempo1.Enabled = true;
             this.Tiempo1.Interval = 1000;
+            this.Tiempo1.Tick += new System.EventHandler(this.Tiempo1_Tick);
             // 
             // FVocalU
             // 

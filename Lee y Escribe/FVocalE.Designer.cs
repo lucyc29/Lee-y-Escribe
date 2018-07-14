@@ -79,6 +79,7 @@
             this.BatrasE.Text = "    Atras";
             this.BatrasE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BatrasE.UseVisualStyleBackColor = false;
+            this.BatrasE.Click += new System.EventHandler(this.BatrasE_Click);
             // 
             // BRepE
             // 
@@ -93,6 +94,7 @@
             this.BRepE.Text = "   Repetir";
             this.BRepE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BRepE.UseVisualStyleBackColor = true;
+            this.BRepE.Click += new System.EventHandler(this.BRepE_Click);
             // 
             // Velocidad
             // 
@@ -150,6 +152,7 @@
             // 
             this.Tiempo1.Enabled = true;
             this.Tiempo1.Interval = 1000;
+            this.Tiempo1.Tick += new System.EventHandler(this.Tiempo1_Tick);
             // 
             // FVocalE
             // 

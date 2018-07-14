@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FVocalA));
             this.PVocalA = new System.Windows.Forms.Panel();
-            this.BAtrasA = new System.Windows.Forms.Button();
             this.Velocidad = new System.Windows.Forms.TrackBar();
+            this.Tiempo1 = new System.Windows.Forms.Timer(this.components);
+            this.BAtrasA = new System.Windows.Forms.Button();
             this.PAnillo = new System.Windows.Forms.PictureBox();
             this.PAvion = new System.Windows.Forms.PictureBox();
             this.PAbeja = new System.Windows.Forms.PictureBox();
             this.BRepA = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Tiempo1 = new System.Windows.Forms.Timer(this.components);
             this.PVocalA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Velocidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PAnillo)).BeginInit();
@@ -63,6 +63,21 @@
             this.PVocalA.Size = new System.Drawing.Size(805, 540);
             this.PVocalA.TabIndex = 8;
             // 
+            // Velocidad
+            // 
+            this.Velocidad.Location = new System.Drawing.Point(12, 495);
+            this.Velocidad.Minimum = -10;
+            this.Velocidad.Name = "Velocidad";
+            this.Velocidad.Size = new System.Drawing.Size(171, 45);
+            this.Velocidad.TabIndex = 9;
+            this.Velocidad.Value = -2;
+            // 
+            // Tiempo1
+            // 
+            this.Tiempo1.Enabled = true;
+            this.Tiempo1.Interval = 1000;
+            this.Tiempo1.Tick += new System.EventHandler(this.Tiempo1_Tick);
+            // 
             // BAtrasA
             // 
             this.BAtrasA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -77,15 +92,7 @@
             this.BAtrasA.Text = "    Atras";
             this.BAtrasA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BAtrasA.UseVisualStyleBackColor = false;
-            // 
-            // Velocidad
-            // 
-            this.Velocidad.Location = new System.Drawing.Point(12, 495);
-            this.Velocidad.Minimum = -10;
-            this.Velocidad.Name = "Velocidad";
-            this.Velocidad.Size = new System.Drawing.Size(171, 45);
-            this.Velocidad.TabIndex = 9;
-            this.Velocidad.Value = -2;
+            this.BAtrasA.Click += new System.EventHandler(this.BAtrasA_Click_1);
             // 
             // PAnillo
             // 
@@ -130,6 +137,7 @@
             this.BRepA.Text = "   Repetir";
             this.BRepA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BRepA.UseVisualStyleBackColor = true;
+            this.BRepA.Click += new System.EventHandler(this.BRepA_Click);
             // 
             // pictureBox1
             // 
@@ -143,11 +151,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Tiempo1
-            // 
-            this.Tiempo1.Enabled = true;
-            this.Tiempo1.Interval = 1000;
-            // 
             // FVocalA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,7 +158,9 @@
             this.ClientSize = new System.Drawing.Size(805, 540);
             this.Controls.Add(this.PVocalA);
             this.Name = "FVocalA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FVocalA";
+            this.Load += new System.EventHandler(this.FVocalA_Load);
             this.PVocalA.ResumeLayout(false);
             this.PVocalA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Velocidad)).EndInit();

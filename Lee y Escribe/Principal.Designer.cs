@@ -111,6 +111,7 @@
             this.LVocales.Text = " Lecciones";
             this.LVocales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.LVocales.UseVisualStyleBackColor = true;
+            this.LVocales.Click += new System.EventHandler(this.LVocales_Click);
             // 
             // Inicio
             // 

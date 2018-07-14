@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FVocalO));
             this.PVocalO = new System.Windows.Forms.Panel();
+            this.Velocidad = new System.Windows.Forms.TrackBar();
+            this.Tiempo1 = new System.Windows.Forms.Timer(this.components);
             this.BTRAS = new System.Windows.Forms.Button();
             this.BRepO = new System.Windows.Forms.Button();
-            this.Velocidad = new System.Windows.Forms.TrackBar();
             this.POso = new System.Windows.Forms.PictureBox();
             this.POjo = new System.Windows.Forms.PictureBox();
             this.POlla = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Tiempo1 = new System.Windows.Forms.Timer(this.components);
             this.PVocalO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Velocidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.POso)).BeginInit();
@@ -64,6 +64,22 @@
             this.PVocalO.Size = new System.Drawing.Size(805, 540);
             this.PVocalO.TabIndex = 15;
             // 
+            // Velocidad
+            // 
+            this.Velocidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Velocidad.Location = new System.Drawing.Point(12, 442);
+            this.Velocidad.Minimum = -10;
+            this.Velocidad.Name = "Velocidad";
+            this.Velocidad.Size = new System.Drawing.Size(171, 45);
+            this.Velocidad.TabIndex = 11;
+            this.Velocidad.Value = -2;
+            // 
+            // Tiempo1
+            // 
+            this.Tiempo1.Enabled = true;
+            this.Tiempo1.Interval = 1000;
+            this.Tiempo1.Tick += new System.EventHandler(this.Tiempo1_Tick);
+            // 
             // BTRAS
             // 
             this.BTRAS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -78,6 +94,7 @@
             this.BTRAS.Text = "    Atras";
             this.BTRAS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BTRAS.UseVisualStyleBackColor = false;
+            this.BTRAS.Click += new System.EventHandler(this.BTRAS_Click);
             // 
             // BRepO
             // 
@@ -93,16 +110,7 @@
             this.BRepO.Text = "   Repetir";
             this.BRepO.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BRepO.UseVisualStyleBackColor = false;
-            // 
-            // Velocidad
-            // 
-            this.Velocidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Velocidad.Location = new System.Drawing.Point(12, 442);
-            this.Velocidad.Minimum = -10;
-            this.Velocidad.Name = "Velocidad";
-            this.Velocidad.Size = new System.Drawing.Size(171, 45);
-            this.Velocidad.TabIndex = 11;
-            this.Velocidad.Value = -2;
+            this.BRepO.Click += new System.EventHandler(this.BRepO_Click);
             // 
             // POso
             // 
@@ -146,11 +154,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(345, 320);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // Tiempo1
-            // 
-            this.Tiempo1.Enabled = true;
-            this.Tiempo1.Interval = 1000;
             // 
             // FVocalO
             // 

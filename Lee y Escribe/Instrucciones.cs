@@ -90,5 +90,9 @@ namespace Lee_y_Escribe
                 principal.Visible = true;
             }
         }
+
+
     }
 }
+
+

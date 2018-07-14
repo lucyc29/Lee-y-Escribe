@@ -152,6 +152,7 @@
             // 
             this.Tiempo1.Enabled = true;
             this.Tiempo1.Interval = 1000;
+            this.Tiempo1.Tick += new System.EventHandler(this.Tiempo1_Tick);
             // 
             // FVocalI
             // 

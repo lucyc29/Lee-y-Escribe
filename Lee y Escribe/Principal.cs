@@ -27,7 +27,7 @@ namespace Lee_y_Escribe
         {
             voz.Rate = TVelocidad.Value;
             voz.SelectVoiceByHints(VoiceGender.Female);
-            voz.SetOutputToDefaultAudioDevice();
+            //voz.SetOutputToDefaultAudioDevice();
             voz.Speak(texto.ToString());
         }
 
@@ -61,6 +61,14 @@ namespace Lee_y_Escribe
             voz.Pause();
             this.Hide();
             memoria.Visible = true;
+        }
+
+        private void LVocales_Click(object sender, EventArgs e)
+        {
+            PruebaDePaneles pruebapaneles = new PruebaDePaneles();
+            voz.Pause();
+            this.Hide();
+            pruebapaneles.Visible = true;
         }
     }
 }
