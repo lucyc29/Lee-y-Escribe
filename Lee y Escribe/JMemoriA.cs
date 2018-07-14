@@ -89,46 +89,55 @@ namespace Lee_y_Escribe
 
         private void btnCarta_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (CartaSeleccionada.Count < 2)
+                {
 
-            if (CartaSeleccionada.Count < 2)
+                    Movimientos++;
+                    lblRecord.Text = Convert.ToString(Movimientos);
+                    var CartasSeleccionadaUsuario = (PictureBox)sender;
+
+
+                    CartaActual = Convert.ToInt32(CartasRevueltas[Convert.ToInt32(CartasSeleccionadaUsuario.Name) - 1]);
+                    CartasSeleccionadaUsuario.Image = RecuperarImagen(CartaActual);
+                    CartaSeleccionada.Add(CartasSeleccionadaUsuario);
+
+                    if (CartaSeleccionada.Count == 2)
+                    {
+                        Temp1 = (PictureBox)CartaSeleccionada[0];
+                        Temp2 = (PictureBox)CartaSeleccionada[1];
+
+                        int Carta1 = Convert.ToInt32(CartasRevueltas[Convert.ToInt32(Temp1.Name) - 1]);
+                        int Carta2 = Convert.ToInt32(CartasRevueltas[Convert.ToInt32(Temp2.Name) - 1]);
+                        
+                        if (Carta1 != Carta2)
+                        {
+                            
+                            timer1.Enabled = true;
+                            timer1.Start();
+                        }
+                        else
+                        {
+                            CantidadCartasVol++;
+                            if (CantidadCartasVol > 7)
+                            {
+                                MessageBox.Show("                         Muy Bien!!!                        ");
+                            }
+                            Temp1.Enabled = false;
+                            Temp2.Enabled = false;
+                            CartaSeleccionada.Clear();
+                        }
+                    }
+
+                }
+            }
+            catch (Exception )
             {
 
-                Movimientos++;
-                lblRecord.Text = Convert.ToString(Movimientos);
-                var CartasSeleccionadaUsuario = (PictureBox)sender;
-
-
-                CartaActual = Convert.ToInt32(CartasRevueltas[Convert.ToInt32(CartasSeleccionadaUsuario.Name)-1]);
-                CartasSeleccionadaUsuario.Image = RecuperarImagen(CartaActual);
-                CartaSeleccionada.Add(CartasSeleccionadaUsuario);
-
-                if (CartaSeleccionada.Count == 2)
-                {
-                    Temp1 = (PictureBox)CartaSeleccionada[0];
-                    Temp2 = (PictureBox)CartaSeleccionada[1];
-
-                    int Carta1 = Convert.ToInt32(CartasRevueltas[Convert.ToInt32(Temp1.Name) - 1]);
-                    int Carta2 = Convert.ToInt32(CartasRevueltas[Convert.ToInt32(Temp2.Name) - 1]);
-
-                    if (Carta1 != Carta2)
-                    {
-                        timer1.Enabled = true;
-                        timer1.Start();
-                    }
-                    else
-                    {
-                        CantidadCartasVol++;
-                        if (CantidadCartasVol > 7)
-                        {
-                            MessageBox.Show("                         Muy Bien!!!                        ");
-                        }
-                        Temp1.Enabled = false;
-                        Temp2.Enabled = false;
-                        CartaSeleccionada.Clear();
-                    }
-                }
-
+                throw;
             }
+           
         }
 
         public Bitmap RecuperarImagen(int NumeroImagen)
@@ -150,8 +159,9 @@ namespace Lee_y_Escribe
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             int TiempoVirarCarta = 1;
-            if (TiempoVirarCarta == 1)
+             if (TiempoVirarCarta == 1)
             {
+                
                 Temp1.Image = Properties.Resources.Libros;
                 Temp2.Image = Properties.Resources.Libros;
                 CartaSeleccionada.Clear();

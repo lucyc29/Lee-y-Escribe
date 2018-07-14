@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JMemoriA));
             this.PanelJuego = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblRecord = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblRecord = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,16 +61,17 @@
             this.panel2.Size = new System.Drawing.Size(195, 592);
             this.panel2.TabIndex = 1;
             // 
-            // lblRecord
+            // label3
             // 
-            this.lblRecord.AutoSize = true;
-            this.lblRecord.BackColor = System.Drawing.Color.Transparent;
-            this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(90, 136);
-            this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(21, 24);
-            this.lblRecord.TabIndex = 1;
-            this.lblRecord.Text = "0";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 260);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Reiniciar Juego";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -84,17 +85,21 @@
             this.label2.Text = "Atras";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // label3
+            // lblRecord
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 260);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Reiniciar Juego";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblRecord.AutoSize = true;
+            this.lblRecord.BackColor = System.Drawing.Color.Transparent;
+            this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecord.Location = new System.Drawing.Point(90, 136);
+            this.lblRecord.Name = "lblRecord";
+            this.lblRecord.Size = new System.Drawing.Size(21, 24);
+            this.lblRecord.TabIndex = 1;
+            this.lblRecord.Text = "0";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 600;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // JMemoriA
             // 
